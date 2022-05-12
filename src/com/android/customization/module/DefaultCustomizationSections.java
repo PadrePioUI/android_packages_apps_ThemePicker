@@ -20,6 +20,12 @@ import com.android.wallpaper.model.WallpaperSectionController;
 import com.android.wallpaper.model.WorkspaceViewModel;
 import com.android.wallpaper.module.CustomizationSections;
 
+import com.android.customization.model.color.ColorSectionController;
+import com.android.customization.model.font.FontManager;
+import com.android.customization.model.font.FontSectionController;
+import com.android.customization.model.iconpack.IconPackManager;
+import com.android.customization.model.iconpack.IconPackSectionController;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,6 +60,9 @@ public final class DefaultCustomizationSections implements CustomizationSections
         sectionControllers.add(new GridSectionController(
                 GridOptionsManager.getInstance(activity), sectionNavigationController));
 
+        // Font selection section.
+        sectionControllers.add(new FontSectionController(
+                FontManager.getInstance(activity, new OverlayManagerCompat(activity)), sectionNavigationController));
         return sectionControllers;
     }
 }

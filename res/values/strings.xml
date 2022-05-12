@@ -30,6 +30,9 @@
         the home screen. [CHAR LIMIT=15] -->
     <string name="grid_title">App grid</string>
 
+    <string name="font_title">System Fonts</string>
+    <string name="font_preview_card_content_description">Font Preview</string>
+
     <!-- Label for a button that allows the user to apply the currently selected Theme.
         [CHAR LIMIT=20] -->
     <string name="apply_theme_btn">Apply</string>
